@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ * iPhoneアプリの画面やUIを管理するためのファイル
+ */
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?

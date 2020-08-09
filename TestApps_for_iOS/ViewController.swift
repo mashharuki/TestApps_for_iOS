@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ * デフォルト画面用コントローラークラス
+ */
 class ViewController: UIViewController {
 
     override func viewDidLoad() {

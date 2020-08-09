@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ * iPhoneアプリ全体を管理するためのファイル
+ */
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

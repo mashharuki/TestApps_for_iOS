@@ -15,23 +15,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SU0-IL-EGu">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
-                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Aa-pp-58u">
+                                <rect key="frame" x="186" y="174" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="olH-I4-1uu">
+                                <rect key="frame" x="148" y="433" width="118" height="31"/>
+                                <connections>
+                                    <action selector="showValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="NV2-L9-5xX"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8JM-I3-EM5"/>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JFx-k2-aOW"/>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hiV-ja-fmU"/>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kPV-Gh-tR3"/>
+                            <constraint firstItem="olH-I4-1uu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CjL-QH-GA4"/>
+                            <constraint firstItem="5Aa-pp-58u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ECf-mP-OVX"/>
+                            <constraint firstItem="5Aa-pp-58u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="EQL-6K-q4P"/>
+                            <constraint firstItem="olH-I4-1uu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="lVS-ww-H3Q"/>
+                            <constraint firstItem="olH-I4-1uu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oOv-4C-wmW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="5Aa-pp-58u" id="EWG-sN-4y7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="SU0-IL-EGu">
+                    <rect key="frame" x="0.0" y="0.0" width="441" height="683"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </mapView>
             </objects>
-            <point key="canvasLocation" x="-251" y="66"/>
+            <point key="canvasLocation" x="-252.17391304347828" y="65.625"/>
         </scene>
     </scenes>
 </document>

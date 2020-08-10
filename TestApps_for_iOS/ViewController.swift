@@ -12,12 +12,19 @@ import UIKit
  * デフォルト画面用コントローラークラス
  */
 class ViewController: UIViewController {
-
+    
+    /**
+     * デフォルト処理
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    /**
+     * メモリ不足になった時に自動的に呼び出されるメソッド
+     */
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 }
 

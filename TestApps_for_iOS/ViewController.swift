@@ -13,11 +13,19 @@ import UIKit
  */
 class ViewController: UIViewController {
 
+    /**
+     * デフォルトで呼び出されるメソッド
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    /**
+     * メモリ不足時に呼び出されるメソッド
+     */
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 }
 

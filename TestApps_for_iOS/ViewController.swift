@@ -11,15 +11,34 @@ import UIKit
 /**
  * デフォルト画面用コントローラークラス
  */
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
-    /** imageViewと接続 */
+    /** 画面上のimageView要素を取得*/
     @IBOutlet weak var imageView: UIImageView!
     
     /**
-     * ツールバーのカメラアイコンと接続
+     * ツールバーのカメラアイコンを押した時に処理するメソッド
      */
     @IBAction func launchCamera(_ sender: UIBarButtonItem) {
+        //カメラの要素を取得
+        let camera = UIImagePickerController.SourceType.camera
+        //
+        if UIImagePickerController.isSourceTypeAvailable(camera){
+            let picker = UIImagePickerController()
+            picker.sourceType = camera
+            picker.delegate = self
+            self.present(picker,animated: true)
+        }
+    }
+    
+    /**
+     * ユーザーが写真を撮影し終えた時に処理するメソッド
+     */
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as! UIImage
+        self.imageView.image = image
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        self.dismiss(animated: true)
     }
     
     /**

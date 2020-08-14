@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,26 +12,46 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestApps_for_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SU0-IL-EGu">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
-                            </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5cl-CD-oBw">
+                                <rect key="frame" x="0.0" y="1" width="375" height="664"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAC-uF-Hkw">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="GfN-gd-Lsj">
+                                        <connections>
+                                            <action selector="launchCamera:" destination="BYZ-38-t0r" id="QIg-Fo-gxN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8JM-I3-EM5"/>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JFx-k2-aOW"/>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hiV-ja-fmU"/>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kPV-Gh-tR3"/>
+                            <constraint firstItem="5cl-CD-oBw" firstAttribute="leading" secondItem="NAC-uF-Hkw" secondAttribute="leading" id="7RT-JP-Umb"/>
+                            <constraint firstItem="5cl-CD-oBw" firstAttribute="trailing" secondItem="NAC-uF-Hkw" secondAttribute="trailing" id="LEL-p8-MOt"/>
+                            <constraint firstItem="5cl-CD-oBw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZLo-pv-yqb"/>
+                            <constraint firstItem="5cl-CD-oBw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dKJ-QO-zgY"/>
+                            <constraint firstItem="NAC-uF-Hkw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gBo-fc-h2w"/>
+                            <constraint firstItem="5cl-CD-oBw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iV6-R0-hsI"/>
+                            <constraint firstItem="5cl-CD-oBw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="m8F-cn-iiI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="5cl-CD-oBw" id="fWU-o2-q2Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="SU0-IL-EGu">
+                    <rect key="frame" x="0.0" y="0.0" width="144" height="115"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </mapView>
             </objects>
-            <point key="canvasLocation" x="-251" y="66"/>
+            <point key="canvasLocation" x="-253.59999999999999" y="65.217391304347828"/>
         </scene>
     </scenes>
 </document>

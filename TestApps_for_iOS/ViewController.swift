@@ -13,6 +13,15 @@ import UIKit
  */
 class ViewController: UIViewController {
 
+    /** imageViewと接続 */
+    @IBOutlet weak var imageView: UIImageView!
+    
+    /**
+     * ツールバーのカメラアイコンと接続
+     */
+    @IBAction func launchCamera(_ sender: UIBarButtonItem) {
+    }
+    
     /**
      * デフォルトで呼び出されるメソッド
      */

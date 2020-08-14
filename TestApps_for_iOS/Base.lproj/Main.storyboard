@@ -15,23 +15,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SU0-IL-EGu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="rCM-d6-lET">
                                 <rect key="frame" x="20" y="44" width="374" height="818"/>
-                            </mapView>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="UC9-2d-FFU">
+                                <rect key="frame" x="20" y="818" width="374" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="a60-rm-bgR">
+                                        <connections>
+                                            <action selector="showActivityView:" destination="BYZ-38-t0r" id="nkR-rH-UPX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8JM-I3-EM5"/>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JFx-k2-aOW"/>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hiV-ja-fmU"/>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kPV-Gh-tR3"/>
+                            <constraint firstItem="UC9-2d-FFU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0TS-km-Qmn"/>
+                            <constraint firstItem="rCM-d6-lET" firstAttribute="leading" secondItem="UC9-2d-FFU" secondAttribute="leading" id="8c9-s1-mW1"/>
+                            <constraint firstItem="rCM-d6-lET" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9sI-t8-daf"/>
+                            <constraint firstItem="UC9-2d-FFU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="774" id="UFk-MJ-p9N"/>
+                            <constraint firstItem="rCM-d6-lET" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xy1-LN-goI"/>
+                            <constraint firstItem="rCM-d6-lET" firstAttribute="bottom" secondItem="UC9-2d-FFU" secondAttribute="bottom" id="Z5b-k0-rL8"/>
+                            <constraint firstItem="rCM-d6-lET" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZHg-rV-t8d"/>
+                            <constraint firstItem="rCM-d6-lET" firstAttribute="trailing" secondItem="UC9-2d-FFU" secondAttribute="trailing" id="rSt-ut-EsD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="rCM-d6-lET" id="e9v-tO-0Ft"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="SU0-IL-EGu">
+                    <rect key="frame" x="0.0" y="0.0" width="105" height="92"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </mapView>
             </objects>
-            <point key="canvasLocation" x="-251" y="66"/>
+            <point key="canvasLocation" x="-252.17391304347828" y="64.955357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="384" height="512"/>
+    </resources>
 </document>

@@ -23,8 +23,11 @@ class DetailViewController : UIViewController{
     override func viewDidLoad() {
         //親クラスのメソッドを実装
         super.viewDidLoad()
+        //遷移先のURLが不正でないかをチェックする。
         if let url = URL(string: self.link){
+            //requestインスタンスを生成(キャッシュを利用した保存方法を指定)
             let request = URLRequest(url: url)
+            //該当の記事の内容をネットワークからダウンロードして表示
             self.webview.load(request)
         }
     }

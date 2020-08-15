@@ -108,13 +108,17 @@ class ListViewController: UITableViewController,XMLParserDelegate{
     }
     
     /**
-     *
+     * 画面遷移のタイミングで、データをDetailViewControllerに渡すためのメソッド
      */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //ユーザーがタップしたセルの情報を取得する。
         if let indexPath = self.tableView.indexPathForSelectedRow{
             let item = items[indexPath.row]
+            //遷移先のビューコントローラーを格納
             let controller = segue.destination as! DetailViewController
+            //記事のタイトル要素を渡す
             controller.title = item.title
+            //記事のリンクを渡す。
             controller.link = item.link
         }
     }

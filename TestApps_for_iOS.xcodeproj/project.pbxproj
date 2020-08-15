@@ -55,7 +55,6 @@
 		5EC8AF3F24E00E85000A1DBF = {
 			isa = PBXGroup;
 			children = (
-				5E21E13724E7800000F9CB74 /* DetailViewController.swift */,
 				5EC8AF4A24E00E85000A1DBF /* TestApps_for_iOS */,
 				5EC8AF4924E00E85000A1DBF /* Products */,
 				5E21E13424E77FD700F9CB74 /* Frameworks */,
@@ -73,6 +72,7 @@
 		5EC8AF4A24E00E85000A1DBF /* TestApps_for_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				5E21E13724E7800000F9CB74 /* DetailViewController.swift */,
 				5E21E13024E7670500F9CB74 /* ListViewController.swift */,
 				5EC8AF4B24E00E85000A1DBF /* AppDelegate.swift */,
 				5EC8AF4D24E00E85000A1DBF /* SceneDelegate.swift */,

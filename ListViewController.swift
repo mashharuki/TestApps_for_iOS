@@ -13,10 +13,13 @@ import UIKit
  */
 class ListViewController: UITableViewController,XMLParserDelegate{
     
-    //必要な変数を宣言
+    //XMLParser型のインスタンスを格納するためのプロパティ
     var parser : XMLParser!
+    //複数の記事を格納するための配列型プロパティ
     var items = [Item]()
+    //Item型クラスのオブジェクトのプロパティ
     var item : Item?
+    //要素を格納するためのプロパティ
     var currentString = ""
         
     /**
@@ -51,7 +54,7 @@ class ListViewController: UITableViewController,XMLParserDelegate{
     
     
     /**
-     *
+     * 記事をダウンロードするメソッド
      */
     func startDownload(){
         self.items = []
@@ -59,13 +62,14 @@ class ListViewController: UITableViewController,XMLParserDelegate{
             if let parser = XMLParser(contentsOf: url){
                 self.parser = parser
                 self.parser.delegate = self
+                //データの解析を開始
                 self.parser.parse()
             }
         }
     }
     
     /**
-     *
+     * ニュース記事の要素名からitemを見つける
      */
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         self.currentString = ""
@@ -75,17 +79,18 @@ class ListViewController: UITableViewController,XMLParserDelegate{
     }
     
     /**
-     *
+     * 内容を取り出すメソッド（内容が見つかると自動的に呼び出される。）
      */
     func parser(_ parser: XMLParser, foundCharacters string: String) {
+        //要素を取り出す
         self.currentString += string
     }
     
     /**
-     *
+     * itemsに１つの記事の内容を追加する。
      */
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        //要素名ごとに格納する変数の内容を変化させる。
+        //要素名ごとに格納する要素を変化させる。
         switch elementName{
             case "title" : self.item?.title = currentString
             case "link" : self.item?.link = currentString
@@ -95,9 +100,10 @@ class ListViewController: UITableViewController,XMLParserDelegate{
     }
     
     /**
-     *
+     * 解析したデータを表示するメソッド
      */
     func parserDidEndDocument(_ parser: XMLParser) {
+        //解析したデータを表示する。
         self.tableView.reloadData()
     }
 }

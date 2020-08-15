@@ -15,23 +15,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SU0-IL-EGu">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
-                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBc-i1-KIz">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="sayHello" destination="BYZ-38-t0r" eventType="touchUpInside" id="kYU-Ak-yK5"/>
+                                    <action selector="sayHello:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vaI-Ly-CHK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="test" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEU-MM-lkf">
+                                <rect key="frame" x="188" y="236" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8JM-I3-EM5"/>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JFx-k2-aOW"/>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hiV-ja-fmU"/>
-                            <constraint firstItem="SU0-IL-EGu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kPV-Gh-tR3"/>
+                            <constraint firstItem="oEU-MM-lkf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DBh-WO-pC6"/>
+                            <constraint firstItem="VBc-i1-KIz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ke6-Ey-M0i"/>
+                            <constraint firstItem="oEU-MM-lkf" firstAttribute="centerX" secondItem="VBc-i1-KIz" secondAttribute="centerX" id="UlA-Tm-MJ7"/>
+                            <constraint firstItem="oEU-MM-lkf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="193" id="cky-iG-Qa4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="oEU-MM-lkf" id="fYw-wF-o78"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="SU0-IL-EGu">
+                    <rect key="frame" x="0.0" y="0.0" width="167" height="169"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </mapView>
             </objects>
-            <point key="canvasLocation" x="-251" y="66"/>
+            <point key="canvasLocation" x="-252.17391304347828" y="65.625"/>
         </scene>
     </scenes>
 </document>

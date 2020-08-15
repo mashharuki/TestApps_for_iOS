@@ -13,6 +13,13 @@ import UIKit
  */
 class ViewController: UIViewController {
 
+    //ラベル要素と接続
+    @IBOutlet weak var label: UILabel!
+    //ボタンをタップした時に処理するメソッド
+    @IBAction func sayHello() {
+        label.text = "Hello!"
+    }
+    
     /**
      * デフォルトで呼び出されるメソッド
      */

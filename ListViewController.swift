@@ -58,7 +58,7 @@ class ListViewController: UITableViewController,XMLParserDelegate{
      */
     func startDownload(){
         self.items = []
-        if let url = URL(string : "https://www.apple.com/jp/newsroom/rss-feed.rss"){
+        if let url = URL(string : "https://jp.techcrunch.com/feed/"){
             if let parser = XMLParser(contentsOf: url){
                 self.parser = parser
                 self.parser.delegate = self

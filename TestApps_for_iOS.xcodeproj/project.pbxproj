@@ -13,6 +13,7 @@
 		5EC8AF5324E00E85000A1DBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC8AF5124E00E85000A1DBF /* Main.storyboard */; };
 		5EC8AF5524E00E86000A1DBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EC8AF5424E00E86000A1DBF /* Assets.xcassets */; };
 		5EC8AF5824E00E86000A1DBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC8AF5624E00E86000A1DBF /* LaunchScreen.storyboard */; };
+		5EF7450224E7C96300DF6409 /* Localaization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EF7450424E7C96300DF6409 /* Localaization.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5EC8AF5924E00E86000A1DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EF744FE24E7C69200DF6409 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		5EF744FF24E7C69200DF6409 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5EF7450324E7C96300DF6409 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localaization.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				5EC8AF4B24E00E85000A1DBF /* AppDelegate.swift */,
 				5EC8AF4D24E00E85000A1DBF /* SceneDelegate.swift */,
 				5EC8AF4F24E00E85000A1DBF /* ViewController.swift */,
+				5EF7450424E7C96300DF6409 /* Localaization.strings */,
 				5EC8AF5124E00E85000A1DBF /* Main.storyboard */,
 				5EC8AF5424E00E86000A1DBF /* Assets.xcassets */,
 				5EC8AF5624E00E86000A1DBF /* LaunchScreen.storyboard */,
@@ -131,6 +134,7 @@
 				5EC8AF5824E00E86000A1DBF /* LaunchScreen.storyboard in Resources */,
 				5EC8AF5524E00E86000A1DBF /* Assets.xcassets in Resources */,
 				5EC8AF5324E00E85000A1DBF /* Main.storyboard in Resources */,
+				5EF7450224E7C96300DF6409 /* Localaization.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +170,15 @@
 				5EF744FF24E7C69200DF6409 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5EF7450424E7C96300DF6409 /* Localaization.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EF7450324E7C96300DF6409 /* ja */,
+			);
+			name = Localaization.strings;
+			path = Translation;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

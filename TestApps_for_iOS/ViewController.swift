@@ -20,7 +20,7 @@ class ViewController: UIViewController {
      * ボタンと接続
      */
     @IBAction func sayHello() {
-        label.text = "Hello！"
+        label.text = NSLocalizedString("Hello", comment: "ボタンをタップした時に表示する文言です。")
     }
     
     /**

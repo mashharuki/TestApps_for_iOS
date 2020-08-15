@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--最初の画面-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestApps_for_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="最初の画面" id="BYZ-38-t0r" customClass="ViewController" customModule="TestApps_for_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,6 +64,36 @@
                 </mapView>
             </objects>
             <point key="canvasLocation" x="-252.17391304347828" y="65.625"/>
+        </scene>
+        <!--クイズ画面-->
+        <scene sceneID="mfU-57-15E">
+            <objects>
+                <viewController title="クイズ画面" id="Hl3-Ex-ObE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nHB-6W-B5n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="OnS-G4-4pb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wMk-GS-FlD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="455" y="66"/>
+        </scene>
+        <!--回答画面-->
+        <scene sceneID="9BC-we-DWK">
+            <objects>
+                <viewController title="回答画面" id="402-fd-Y8J" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vx1-Q0-kJx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="rcg-P5-zB8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BIu-bm-mEF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143" y="66"/>
         </scene>
     </scenes>
 </document>

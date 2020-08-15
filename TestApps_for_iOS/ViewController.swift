@@ -13,18 +13,29 @@ import UIKit
  */
 class ViewController: UIViewController {
 
+    //ラベルと接続
+    @IBOutlet weak var label: UILabel!
+    
+    /**
+     * ボタンをタップした際に処理するメソッド
+     */
+    @IBAction func pressButton(_ sender: Any) {
+        self.label.text = "ボタンを押しました。"
+    }
+    
     /**
      * デフォルトで呼び出されるメソッド
      */
     override func viewDidLoad() {
+        //親クラスのメソッドを実装
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     /**
      * メモリ不足時に呼び出されるメソッド
      */
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning(){
+        //親クラスのメソッドを実装
         super.didReceiveMemoryWarning()
     }
 }

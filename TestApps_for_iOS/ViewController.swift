@@ -20,7 +20,7 @@ class ViewController: UIViewController {
      * ボタンと接続
      */
     @IBAction func sayHello() {
-        label.text = "こんにちは！"
+        label.text = "Hello！"
     }
     
     /**

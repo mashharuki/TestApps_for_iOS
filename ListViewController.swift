@@ -24,8 +24,8 @@ class ListViewController: UITableViewController{
      * 表示するセルを作成するメソッド
      */
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //表示するセルを作成
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: <#T##IndexPath#>)
+        //表示するセルを作成（セルを再利用するように設定している。）
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         //作成したセルを返す
         return cell
     }

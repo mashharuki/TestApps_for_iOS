@@ -24,8 +24,7 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         //親クラスのメソッドを実装
         super.viewDidLoad()
-        //最初の画面から値を受け取る
-        self.label.text = self.nameText
+        
     }
     
     

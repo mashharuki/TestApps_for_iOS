@@ -130,7 +130,7 @@ class QuizViewController: UIViewController {
     func showNextQuiz(){
         //次のクイズを取得
         self.manager.nextQuiz()
-        //カードを元の位置に戻す。
+        //カードを元の位置に戻す。（変換をリセットする。）
         self.quizCard.transform = CGAffineTransform.identity
         //カードの状態を初期状態に戻す。
         self.quizCard.style = .initial

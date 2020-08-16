@@ -12,7 +12,18 @@ import UIKit
  * クイズ結果画面用ビューコントローラー
  */
 class ResultViewController: UIViewController {
-
+    
+    //ラベルと接続
+    @IBOutlet weak var label: UILabel!
+    //テキストと接続
+    @IBOutlet weak var textView: UITextView!
+    
+    /**
+     * ボタンをタップした時に処理するメソッド
+     */
+    @IBAction func pushResultButton() {
+    }
+    
     /**
      * デフォルトで呼び出されるメソッド
      */

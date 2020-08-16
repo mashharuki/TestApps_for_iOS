@@ -34,8 +34,23 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         //親クラスのメソッドを実装
         super.viewDidLoad()
-
-        
+        //名前を出力します。
+        self.label.text = "\(self.nameText)さん　あなたのスコアは\(self.score)です。"
+        //文言を格納する変数
+        var text =  ""
+        //スコアに応じて格納する文言を変化させる。
+        switch self.score {
+           case 0...2:
+               text = "動物に関してあまり興味はないでしょうか？\n\nもっと頑張りましょう！"
+           case 3,4:
+               text = "動物にはかなり詳しい方ですね！\n\nもう少しです！"
+           case 5:
+               text = "全問正解です！\n\nおめでとうございます！"
+           default:
+               break
+           }
+        //スコアに応じた文言を出力
+       self.textView.text = text
     }
     
 

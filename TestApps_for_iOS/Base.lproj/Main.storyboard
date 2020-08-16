@@ -217,6 +217,7 @@
                     <connections>
                         <outlet property="label" destination="HlA-1t-s0V" id="8yR-vm-980"/>
                         <outlet property="quizCard" destination="7nE-yd-NnU" id="ef7-YF-CfA"/>
+                        <segue destination="402-fd-Y8J" kind="show" identifier="goToResult" id="u8e-C4-tbu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wMk-GS-FlD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -246,7 +247,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aD-Wo-OXg">
-                                <rect key="frame" x="20" y="336" width="374" height="20.333333333333314"/>
+                                <rect key="frame" x="20" y="380" width="374" height="20.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="gFQ-Oh-65b"/>
                                 </constraints>
@@ -281,6 +282,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rcg-P5-zB8"/>
                     </view>
+                    <navigationItem key="navigationItem" id="IFy-0z-LeG"/>
                     <connections>
                         <outlet property="label" destination="4aD-Wo-OXg" id="bD1-Dp-NM3"/>
                         <outlet property="textView" destination="W6T-fS-fEB" id="c2W-kk-ryw"/>

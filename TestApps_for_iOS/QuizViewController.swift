@@ -130,11 +130,19 @@ class QuizViewController: UIViewController {
     func showNextQuiz(){
         //次のクイズを取得
         self.manager.nextQuiz()
-        //カードを元の位置に戻す。（変換をリセットする。）
-        self.quizCard.transform = CGAffineTransform.identity
-        //カードの状態を初期状態に戻す。
-        self.quizCard.style = .initial
-        //クイズを表示する。
-        self.loadQuiz()
+        //クイズに回答中か回答済みかで処理を分岐する。
+        switch manager.status {
+            case .inAnswer:
+                //カードを元の位置に戻す。（変換をリセットする。）
+                self.quizCard.transform = CGAffineTransform.identity
+                //カードの状態を初期状態に戻す。
+                self.quizCard.style = .initial
+                //クイズを表示する。
+                self.loadQuiz()
+            case .done:
+                //カードを非表示にして結果画面に遷移する。
+                self.quizCard.isHidden = true
+                self.performSegue(withIdentifier: "goToResult", sender: nil)
+        }
     }
 }

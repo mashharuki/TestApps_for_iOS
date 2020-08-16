@@ -39,6 +39,22 @@ class QuizCard: UIView {
      *クイズプロパティの値が変化した時に処理するメソッド
     */
     func setQuizStyle(style : QuizStyle) {
-        
+        //プロパティの状態により、背景色とアイコンを変化させる処理
+        switch style {
+            //初期値の場合
+            case .initial :
+                self.backgroundColor = UIColor(named: "White Color")
+                self.iconImageView.isHidden = true
+            //マルを選択した場合
+            case .right :
+                 self.backgroundColor = UIColor(named: "Base-1")
+                 self.iconImageView.isHidden = false
+                 self.iconImageView.image = UIImage(named : "right icon")
+            //バツを選択した場合
+            case .wrong :
+                 self.backgroundColor = UIColor(named: "Base-2")
+                 self.iconImageView.isHidden = false
+                 self.iconImageView.image = UIImage(named : "wrong icon")
+        }
     }
 }

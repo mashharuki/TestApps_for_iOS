@@ -26,6 +26,8 @@ class ResultViewController: UIViewController {
      * ボタンをタップした時に処理するメソッド
      */
     @IBAction func pushResultButton() {
+        //最初の画面に戻る処理
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     /**

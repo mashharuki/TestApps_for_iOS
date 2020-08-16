@@ -15,7 +15,8 @@ class ViewController: UIViewController {
 
     //ラベルと接続
     @IBOutlet weak var label: UILabel!
-    
+    //テキストフィールドと接続
+    @IBOutlet weak var nameTextField: UITextField!
     /**
      * ボタンをタップした際に処理するメソッド
      */

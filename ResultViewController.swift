@@ -17,6 +17,10 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     //テキストと接続
     @IBOutlet weak var textView: UITextView!
+    //テキスト用グローバル変数
+    var nameText : String = ""
+    //スコア用グローバル変数
+    var score: Int = 0
     
     /**
      * ボタンをタップした時に処理するメソッド

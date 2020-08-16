@@ -31,6 +31,19 @@ class ViewController: UIViewController {
         //親クラスのメソッドを実装
         super.viewDidLoad()
     }
+    
+    /**
+     * 最初の画面から値を受け取り、それを表示するメソッド
+     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //画面遷移先がクイズ回答画面であることを確認
+        if let quizViewController = segue.destination as? QuizViewController{
+            if let text = self.nameTextField.text{
+                //クイズ回答画面の「nameText」プロパティに値を渡す。
+                quizViewController.nameText = text
+            }
+        }
+    }
 
     /**
      * メモリ不足時に呼び出されるメソッド

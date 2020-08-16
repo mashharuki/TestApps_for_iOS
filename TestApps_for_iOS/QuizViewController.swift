@@ -15,15 +15,19 @@ class QuizViewController: UIViewController {
     
     //画面上のラベルと接続
     @IBOutlet weak var label: UILabel!
+    //最初の画面で入力された名前の情報を格納するための変数
+    var  nameText: String = ""
+    
     /**
      * デフォルトメソッド
      */
     override func viewDidLoad() {
         //親クラスのメソッドを実装
         super.viewDidLoad()
+        //最初の画面から値を受け取る
+        self.label.text = self.nameText
     }
     
-
-
+    
 
 }

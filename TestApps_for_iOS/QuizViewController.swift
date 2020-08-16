@@ -53,6 +53,26 @@ class QuizViewController: UIViewController {
      * ジェスチャの動きをUIに反映させるためのメソッド
      */
     func transformQuizCard(gesture : UIPanGestureRecognizer){
+        //移動した距離を取得
+        let translation = gesture.translation(in: self.quizCard)
+        //移動した距離を元にCGAffineTransformオブジェクトを作成(1)
+        let translationTransform = CGAffineTransform(translationX: translation.x, y: translation.y)
+        //画面の幅の半分に対する移動した距離の割合
+        let translationPercent = translation.x/UIScreen.main.bounds.width/2
+        //割合に対して角度を算出
+        let rotationAngle = CGFloat.pi/3 * translationPercent
+        //算出した角度でのCGAffineTransformオブジェクトを作成(2)
+        let rotationTransform = CGAffineTransform(rotationAngle: rotationAngle)
+        //変換のオブジェクトを合成(3)
+        let transform = translationTransform.concatenating(rotationTransform)
+        //quizCardに反映
+        self.quizCard.transform = transform
         
+        //移動させた方向が左ならマル、右ならバツ
+        if translation.x > 0{
+            self.quizCard.style = .right
+        }else{
+            self.quizCard.style = .wrong
+        }
     }
 }

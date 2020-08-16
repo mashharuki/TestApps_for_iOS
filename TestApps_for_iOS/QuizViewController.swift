@@ -145,4 +145,17 @@ class QuizViewController: UIViewController {
                 self.performSegue(withIdentifier: "goToResult", sender: nil)
         }
     }
+    
+    /**
+     * 画面遷移時に呼び出させるメソッド
+     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        //画面遷移先がResultViewControllerの場合
+        if let resultVeiwController : ResultViewController = segue.destination as! ResultViewController{
+            //名前
+            resultVeiwController.nameText = self.nameText
+            //クイズのスコア
+            resultVeiwController.score = self.manager.score
+        }
+    }
 }

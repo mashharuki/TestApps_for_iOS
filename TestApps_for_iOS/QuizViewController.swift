@@ -33,10 +33,26 @@ class QuizViewController: UIViewController {
          //ジェスチャを検知させたいオブジェクトを指定
         self.quizCard.addGestureRecognizer(panGestureRecognizer)
     }
-        /**
-         * ドラッグを検知するメソッド
-         */
-        @objc func dragQuizCard(_ sender : UIPanGestureRecognizer){
-            print("ドラッグしました。")
+    
+    /**
+     * ドラッグを検知するメソッド
+     */
+    @objc func dragQuizCard(_ sender : UIPanGestureRecognizer){
+        //ジェスチャの状態に応じて処理を変化させる
+        switch sender.state {
+            case .began, .changed:
+                self.transformQuizCard(gesture : sender)
+        case .ended:
+                break;
+            default:
+                break
         }
     }
+    
+    /**
+     * ジェスチャの動きをUIに反映させるためのメソッド
+     */
+    func transformQuizCard(gesture : UIPanGestureRecognizer){
+        
+    }
+}

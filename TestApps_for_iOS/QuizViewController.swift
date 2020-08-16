@@ -19,6 +19,8 @@ class QuizViewController: UIViewController {
     var  nameText: String = ""
     //クイズカード用要素と接続
     @IBOutlet weak var quizCard: QuizCard!
+    //クイズを管理するクラス型のインスタンスを生成
+    let manager : QuizManager = QuizManager()
     
     /**
      * デフォルトメソッド
@@ -28,6 +30,8 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
         //クイズカードの初期状態の値を格納
         self.quizCard.style = .initial
+        //クイズの問題文と画像を読み込むメソッドを呼び出す
+        self.loadQuiz()
         //ジェスチャの動きを検知して処理する
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dragQuizCard(_:)))
          //ジェスチャを検知させたいオブジェクトを指定
@@ -74,5 +78,15 @@ class QuizViewController: UIViewController {
         }else{
             self.quizCard.style = .wrong
         }
+    }
+    
+    /**
+     * クイズ用の問題文と画像データを読み込むメソッド
+     */
+    func loadQuiz(){
+        //クイズの問題文を表示する
+        self.quizCard.quizLabel.text = manager.currentQuiz.text
+        //クイズの画像を表示する
+        self.quizCard.quizImageView.image = UIImage(named: manager.currentQuiz.imageName)
     }
 }

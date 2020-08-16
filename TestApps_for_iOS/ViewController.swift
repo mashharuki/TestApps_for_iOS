@@ -30,10 +30,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         //親クラスのメソッドを実装
         super.viewDidLoad()
-        
-        let q = Quiz(text: "問題文",correctAnswer: true,imageName: "neko")
-        
-        
+        //クイズを管理するクラス型のインスタンスを生成
+        let quizManager = QuizManager()
+        //最初のクイズの問題文を取得
+        print(quizManager.currentQuiz.text)
+        //クイズにマル回答する
+        quizManager.answerQuiz(answer: true)
+        //スコアを確認する
+        print(quizManager.score)
+        //次のクイズを取得する
+        quizManager.nextQuiz()
+        //次のクイズの問題文を取得
+        print(quizManager.currentQuiz.text)
     }
     
     /**

@@ -47,6 +47,7 @@ class QuizViewController: UIViewController {
             case .began, .changed:
                 self.transformQuizCard(gesture : sender)
             case .ended:
+                //クイズの回答に応じて、アニメーションで移動させるメソッドを呼び出す。
                 self.answer()
             default:
                 break
@@ -117,9 +118,23 @@ class QuizViewController: UIViewController {
                             self.quizCard.transform = translationTransform
                         },completion: { [unowned self] (finished) in
                             if finished{
-                                //動作確認のため、スコアをコンソールに表示
-                                print(self.manager.score)
+                                //次のクイズカードを表示させるメソッドを呼び出し
+                                self.showNextQuiz()
                             }
         })
+    }
+    
+    /**
+     * 次のクイズカードを表示させるメソッド
+     */
+    func showNextQuiz(){
+        //次のクイズを取得
+        self.manager.nextQuiz()
+        //カードを元の位置に戻す。
+        self.quizCard.transform = CGAffineTransform.identity
+        //カードの状態を初期状態に戻す。
+        self.quizCard.style = .initial
+        //クイズを表示する。
+        self.loadQuiz()
     }
 }

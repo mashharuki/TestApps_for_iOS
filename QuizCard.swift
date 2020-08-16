@@ -43,7 +43,7 @@ class QuizCard: UIView {
         switch style {
             //初期値の場合
             case .initial :
-                self.backgroundColor = UIColor(named: "White Color")
+                self.backgroundColor = UIColor(named: "normal background")
                 self.iconImageView.isHidden = true
             //マルを選択した場合
             case .right :

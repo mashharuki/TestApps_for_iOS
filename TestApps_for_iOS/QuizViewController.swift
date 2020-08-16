@@ -46,8 +46,8 @@ class QuizViewController: UIViewController {
         switch sender.state {
             case .began, .changed:
                 self.transformQuizCard(gesture : sender)
-        case .ended:
-                break;
+            case .ended:
+                self.answer()
             default:
                 break
         }
@@ -88,5 +88,38 @@ class QuizViewController: UIViewController {
         self.quizCard.quizLabel.text = manager.currentQuiz.text
         //クイズの画像を表示する
         self.quizCard.quizImageView.image = UIImage(named: manager.currentQuiz.imageName)
+    }
+    
+    /**
+     * クイズカードをドラッグしてクイズに回答する処理
+     */
+    func answer(){
+        //移動するCGAffineTransformオブジェクト
+        var translationTransform: CGAffineTransform
+        //x軸方向の移動距離
+        let screenWidth = UIScreen.main.bounds.width
+        //y軸方向の移動距離
+        let y = UIScreen.main.bounds.height * 0.2
+        //回答によってtranslationTransformの内容を変化させる。
+        if self.quizCard.style == .right{
+            //マル回答の時は右へ移動
+            translationTransform = CGAffineTransform(translationX: screenWidth, y: y)
+            self.manager.answerQuiz(answer: true)
+        }else{
+            //バツ回答の時は左へ移動
+            translationTransform = CGAffineTransform(translationX: -screenWidth, y: y)
+            self.manager.answerQuiz(answer: false)
+        }
+        //0.1秒遅延させて0.5秒でカードをアニメーション移動させる。
+        UIView.animate(withDuration:  0.5, delay: 0.1, options: [.curveLinear],
+                       animations: {
+                            //クイズのカードのtransformプロパティにtranslationTransformを設定
+                            self.quizCard.transform = translationTransform
+                        },completion: { [unowned self] (finished) in
+                            if finished{
+                                //動作確認のため、スコアをコンソールに表示
+                                print(self.manager.score)
+                            }
+        })
     }
 }

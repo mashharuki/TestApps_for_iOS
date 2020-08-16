@@ -53,4 +53,34 @@ class QuizManager{
         score = 0
         status = .inAnswer
     }
+    
+    /**
+     * 現在のクイズを取得する計算型プロパティ
+     */
+    var currentQuiz : Quiz{
+        get{
+            return self.quizzes[currentIndex]
+        }
+    }
+    
+    /**
+     * クイズのスコアを記録するメソッド
+     */
+    func answerQuiz(answer : Bool){
+        if (self.currentQuiz.correctAnswer == answer) {
+            score += 1
+        }
+    }
+    
+    /**
+     * 次のクイズを取得するメソッド
+     */
+    func nextQuiz(){
+        //最後のクイズだったら、回答を終了する。
+        if currentIndex < quizzes.count - 1 {
+            currentIndex += 1
+        }else{
+            status = .done
+        }
+    }
 }

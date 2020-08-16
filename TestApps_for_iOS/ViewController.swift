@@ -30,6 +30,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         //親クラスのメソッドを実装
         super.viewDidLoad()
+        
+        let q = Quiz(text: "問題文",correctAnswer: true,imageName: "neko")
+        
+        
     }
     
     /**
